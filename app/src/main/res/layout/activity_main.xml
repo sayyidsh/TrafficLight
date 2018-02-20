@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="pro.nanosystems.traffic.MainActivity">
+
+    <ImageView
+        android:id="@+id/yellow_light"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:onClick="turnOnYellow"
+        android:src="@drawable/light_off" />
+
+    <ImageView
+        android:id="@+id/red_light"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_above="@id/yellow_light"
+        android:layout_alignLeft="@id/yellow_light"
+        android:onClick="turnOnRed"
+        android:src="@drawable/light_off" />
+
+    <ImageView
+        android:id="@+id/green_light"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_alignLeft="@id/yellow_light"
+        android:layout_below="@id/yellow_light"
+        android:onClick="turnOnGreen"
+        android:src="@drawable/light_off" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:onClick="turnOnRed"
+        android:text="Red" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:onClick="turnOnYellow"
+        android:text="yellow" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:onClick="turnOnGreen"
+        android:text="green" />
+</RelativeLayout>
